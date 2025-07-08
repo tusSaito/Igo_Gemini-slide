@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>囲碁を通じたコミュニケーションゲーム｜プレゼン資料</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 基本フォント設定 */
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* 吹き出しのスタイル */
+        .speech-bubble {
+            position: relative;
+            background: #ffffff;
+            border-radius: .4em;
+            border: 2px solid #e2e8f0;
+        }
+        .speech-bubble:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 0;
+            height: 0;
+            border: 20px solid transparent;
+            border-right-color: #e2e8f0;
+            border-left: 0;
+            border-top: 0;
+            margin-top: -10px;
+            margin-left: -22px;
+        }
+
+        /* アニメーション */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-4xl">
+
+        <!-- 1. タイトルセクション -->
+        <header class="text-center mb-16 fade-in">
+            <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-2">囲碁を通じたコミュニケーションゲーム</h1>
+            <p class="text-base md:text-lg font-semibold text-indigo-600 mb-4">― このアイデアはGeminiと共に創られました ―</p>
+            <p class="text-lg md:text-xl text-slate-600">人間関係を深め、幸福度向上を目指す新しい囲碁体験</p>
+            <p class="text-sm text-slate-500 mt-4">共同制作者: MAPIYA, YK, akiyuki, broccoli, けんゆー, deep leaner</p>
+        </header>
+
+        <!-- 2. 社会課題セクション -->
+        <section id="problem" class="mb-20 fade-in">
+            <h2 class="text-2xl font-bold text-center mb-8">私たちがGeminiと取り組む社会課題</h2>
+            <div class="flex flex-col md:flex-row items-center gap-6">
+                <div class="flex-shrink-0">
+                    <!-- 画像URLをここに入れる -->
+                    <img src="https://placehold.co/150x150/E2E8F0/64748B?text=キャラ1" alt="キャラクター1" class="rounded-full shadow-lg">
+                </div>
+                <div class="speech-bubble p-6 flex-grow">
+                    <p class="text-lg leading-relaxed">
+                        現代社会では、人と人とのつながりが薄れがちで、それが<span class="font-bold text-indigo-600">幸福度の低下</span>につながっていると感じています。私たちはこの「人間関係の希薄化」という課題に、<span class="font-bold">Gemini</span>の力を使って、テクノロジーと伝統ゲームを組み合わせた新しい解決策を提案します。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. 囲碁への着目セクション -->
+        <section id="why-go" class="mb-20 fade-in">
+             <h2 class="text-2xl font-bold text-center mb-8">なぜ「囲碁」なのか？</h2>
+            <div class="flex flex-col md:flex-row-reverse items-center gap-6">
+                <div class="flex-shrink-0">
+                    <!-- 画像URLをここに入れる -->
+                    <img src="https://placehold.co/150x150/E2E8F0/64748B?text=キャラ2" alt="キャラクター2" class="rounded-full shadow-lg">
+                </div>
+                <div class="speech-bubble p-6 flex-grow" style="--bubble-arrow-position: calc(100% + 22px);">
+                    <p class="text-lg leading-relaxed mb-4">
+                        将棋やチェスと違い、囲碁には駒の役割がありません。どこに石を置くかは全てプレイヤー次第。だからこそ、<span class="font-bold text-indigo-600">プレイヤーの価値観や個性が盤面に色濃く反映</span>され、相手の思考や人柄に触れやすいのです。
+                    </p>
+                     <p class="text-lg leading-relaxed border-t pt-4">
+                        さらに、将棋の駒は漢字なので海外の方には馴染みが薄いですが、囲碁は白と黒の石だけ。用語も万国共通なものが多く、<span class="font-bold text-indigo-600">言葉の壁を越えて誰とでも</span>楽しめます。
+                    </p>
+                </div>
+            </div>
+             <!-- 吹き出しの矢印を右側にするためのインラインスタイル調整 -->
+            <style>
+                #why-go .speech-bubble:after {
+                    left: auto;
+                    right: -22px;
+                    border-left-color: #e2e8f0;
+                    border-right: 0;
+                }
+            </style>
+        </section>
+
+        <!-- 4. 非言語コミュニケーションセクション -->
+        <section id="communication" class="mb-20 fade-in">
+            <h2 class="text-2xl font-bold text-center mb-8">言葉を超えた対話「手談」</h2>
+            <div class="flex flex-col md:flex-row items-center gap-6">
+                <div class="flex-shrink-0">
+                    <!-- 画像URLをここに入れる -->
+                    <img src="https://placehold.co/150x150/E2E8F0/64748B?text=キャラ3" alt="キャラクター3" class="rounded-full shadow-lg">
+                </div>
+                <div class="speech-bubble p-6 flex-grow">
+                    <p class="text-lg leading-relaxed">
+                        囲碁は「手談（しゅだん）」とも呼ばれます。言葉を交わさなくても、石を打つ手つき一つで相手の意図を読み、自分の考えを伝える。この<span class="font-bold text-indigo-600">非言語コミュニケーション</span>によって、言葉の壁がある相手や初対面の人とも、深いレベルでの交流が生まれます。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. 3つのモードセクション -->
+        <section id="modes" class="mb-20 fade-in">
+            <h2 class="text-2xl font-bold text-center mb-10">コミュニケーションを促進する3つのモード</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <!-- 協力モード -->
+                <div class="bg-white p-6 rounded-lg shadow-lg border border-slate-200 transform hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-bold mb-3 text-emerald-600">協力モード</h3>
+                    <p class="text-slate-600">勝敗をつけず、二人で協力して目標ポイントを目指します。相手を思いやり、盤面全体を考える協調性が育まれます。</p>
+                </div>
+                <!-- 教え合いモード -->
+                <div class="bg-white p-6 rounded-lg shadow-lg border border-slate-200 transform hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-bold mb-3 text-sky-600">教え合いモード</h3>
+                    <p class="text-slate-600">お互いの知識やテクニックを共有。「この手はどうかな？」と相談しながら、一緒に上達する喜びを分かち合えます。</p>
+                </div>
+                <!-- 対戦モード -->
+                <div class="bg-white p-6 rounded-lg shadow-lg border border-slate-200 transform hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-xl font-bold mb-3 text-rose-600">対戦モード</h3>
+                    <p class="text-slate-600">お互いの実力を真剣にぶつけ合うクラシックなモード。リスペクトを込めて、高め合う関係を築きます。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. 期待される効果セクション -->
+        <section id="effects" class="mb-20 fade-in">
+            <h2 class="text-2xl font-bold text-center mb-8">このゲームがもたらす未来</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg border border-slate-200">
+                <p class="text-center text-lg mb-6">一つの端末で顔を合わせてプレイすることで、こんな効果が期待できます。</p>
+                <ul class="space-y-4 list-inside">
+                    <li class="flex items-center"><span class="text-green-500 mr-3">✔</span> 世代や地域を超えた、新しい交流の創出</li>
+                    <li class="flex items-center"><span class="text-green-500 mr-3">✔</span> 趣味を通じた、多様なコミュニティへの参加</li>
+                    <li class="flex items-center"><span class="text-green-500 mr-3">✔</span> じっくり向き合う時間から生まれる、深い信頼関係の構築</li>
+                    <li class="flex items-center"><span class="text-green-500 mr-3">✔</span> 人とのつながりを通じた、日々の幸福度の向上</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 7. CTAセクション -->
+        <section id="cta" class="text-center fade-in">
+            <h2 class="text-2xl font-bold mb-4">さあ、新しい囲碁の世界へ</h2>
+            <p class="text-slate-600 mb-8">あなたも、囲碁で誰かとつながってみませんか？</p>
+            <a href="https://tussaito.github.io/Igo_Gemini_product/" target="_blank" rel="noopener noreferrer" class="inline-block bg-indigo-600 text-white font-bold py-4 px-10 rounded-lg shadow-lg hover:bg-indigo-700 transition-colors duration-300 text-lg">
+                ゲームをプレイする
+            </a>
+        </section>
+
+    </div>
+
+    <script>
+        // スクロールで要素をフェードインさせる
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.2, // 20%見えたら発動
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('visible');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+
+</body>
+</html>
